@@ -47,7 +47,10 @@ typedef struct {
     mutex_t sem_queue_mutex;
     queue_t** sem_queue;
     queue_t* removed_element;
-   
+    queue_t** sem_queue_ready;
+    task_t**   sem_t_queue;
+    unsigned char active;
+
 } semaphore_t ;
 
 // estrutura que define uma barreira

@@ -10,7 +10,7 @@
 #undef DEBUG
 #endif
 
- #define DEBUG 1 //debugar inicializações
+//  #define DEBUG 1 //debugar inicializações
 
 
 
@@ -162,11 +162,18 @@ int before_sem_create (semaphore_t *s, int value) {
 
 int sem_create (semaphore_t *s, int value) {
     before_sem_create(s,value);
+
+    if(s==NULL){
+        return -1;
+    }
+
+    s->active=0;
+
     s->sem_id=1;
 
     s->sem_state=value;
 
-    s->removed_element=NULL;
+    // s->removed_element=NULL;
 
     // s->sem_mutex = (mutex_t*) malloc(sizeof(mutex_t));
     
@@ -179,18 +186,28 @@ int sem_create (semaphore_t *s, int value) {
     if (sucesso!=0)
         return -1;
 
-    s->sem_queue= (queue_t**) malloc(sizeof(queue_t*));
-    // if(s->sem_queue==NULL)
-    //     return -1;
-    *(s->sem_queue)=NULL;//empty queue
+    // s->sem_queue= (queue_t**) malloc(sizeof(queue_t*));
+    // // if(s->sem_queue==NULL)
+    // //     return -1;
+    // *(s->sem_queue)=NULL;//empty queue
+
+    // s->sem_queue_ready= (queue_t**) malloc(sizeof(queue_t*));
+
+    // *(s->sem_queue_ready)=NULL;//empty queue
 
     // s->sem_queue_mutex = (mutex_t*) malloc(sizeof(mutex_t));
     
     // if(s->sem_queue_mutex==NULL)
     //     return -1;
 
-    
-    sucesso = mutex_create(&(s->sem_queue_mutex));
+    s->sem_t_queue = (task_t**) malloc(sizeof(task_t*));
+    // if(s->sem_queue==NULL)
+    //     return -1;
+    *(s->sem_t_queue)=NULL;//empty queue
+    // sem_t_queue
+
+
+    // sucesso = mutex_create(&(s->sem_queue_mutex));
        
     if (sucesso!=0)
         return -1;
@@ -217,53 +234,57 @@ int before_sem_down (semaphore_t *s) {
 }
 
 int sem_down (semaphore_t *s) {
+    if(s==NULL || s->active=='n')
+    {
+        return -1;
+    }
+    PPOS_PREEMPT_DISABLE
+    // while (s->active!=0){ task_yield();}
+    s->active=1;
     // before_sem_down(s);
-    mutex_lock(&(s->sem_mutex));
+    // mutex_lock(&(s->sem_mutex));
     s->sem_state=s->sem_state-1;
     int sem_count = s->sem_state;
-    mutex_unlock(&(s->sem_mutex));
-    printf("\nsem_down - BEFORE - [%d] - sem_count - [%d]", taskExec->id , sem_count);
+    // mutex_unlock(&(s->sem_mutex));
+    // printf("\nsem_down - BEFORE - [%d] - sem_count - [%d]", taskExec->id , sem_count);
     if(sem_count<0)
     {
-        mutex_lock(&(s->sem_queue_mutex));
-        queue_t* queue_e = (queue_t*) malloc(sizeof(queue_t));
-        queue_e->prev=NULL;
-        queue_e->next=NULL;
-        if(s->sem_queue==NULL){printf("\n NULLL");}
+        // mutex_lock(&(s->sem_queue_mutex));
 
-        if(*(s->sem_queue)==NULL){
-            queue_e->prev=queue_e;
-            queue_e->next=queue_e;
-            *(s->sem_queue)=queue_e; //insere primeiro elemento na fila
-        }
-        else{
-            queue_append(s->sem_queue,queue_e);
-        }
-        mutex_unlock(&(s->sem_queue_mutex));
+        task_t* task_semaphored= taskExec;
 
-        task_t* task_sem = taskExec;
-        task_t** task_sleep_sem = &sleepQueue;
-        task_suspend(task_sem,task_sleep_sem);
+        task_suspend(task_semaphored,(s->sem_t_queue));
+        // mutex_unlock(&(s->sem_queue_mutex));
+            // mutex_unlock(&(s->sem_mutex));
+        s->active=0;
+        PPOS_PREEMPT_ENABLE
         task_yield();
 
-        mutex_lock(&(s->sem_queue_mutex));
-        int test=1;
-        while (test)
-        {
-            test= (queue_e!=s->removed_element);
-            mutex_unlock(&(s->sem_queue_mutex));
-            mutex_lock(&(s->sem_queue_mutex));
-        }
-        s->removed_element=NULL;
-        mutex_unlock(&(s->sem_queue_mutex));
+        // mutex_lock(&(s->sem_queue_mutex));
 
-        queue_e->next=NULL;
-        queue_e->prev=NULL;
-        free(queue_e);
+        // queue_t* queue_e_rem = queue_remove(s->sem_queue_ready,queue_e);
 
-        task_resume(task_sem);
+        // while (queue_e_rem==NULL)
+        // {
+        //     mutex_unlock(&(s->sem_queue_mutex));
+        //     mutex_lock(&(s->sem_queue_mutex));
+        //     queue_e_rem = queue_remove(s->sem_queue_ready,queue_e);
+        // }
+        // s->removed_element=NULL;
+        // mutex_unlock(&(s->sem_queue_mutex));
+
+        // queue_e->next=NULL;
+        // queue_e->prev=NULL;
+        // free(queue_e);
+
+        // task_resume(task_sem);
     }
+    else{
+        s->active=0;
+        PPOS_PREEMPT_ENABLE 
+        // mutex_unlock(&(s->sem_mutex));
 
+    }
 
     after_sem_down(s);
     return 0;
@@ -287,40 +308,68 @@ int before_sem_up (semaphore_t *s) {
 }
 
 int sem_up (semaphore_t *s){
+
+    if(s==NULL || s->active=='n')
+    {
+        return -1;
+    }
+
+
+    PPOS_PREEMPT_DISABLE
     before_sem_up(s);
-    mutex_lock(&(s->sem_mutex));
+    // while (s->active!=0){ task_yield();}
+    s->active=1;
+    // mutex_lock(&(s->sem_mutex));
     s->sem_state=s->sem_state+1;
     int sem_count = s->sem_state;
-    mutex_unlock(&(s->sem_mutex));
+    // mutex_unlock(&(s->sem_mutex));
 
     if(sem_count<=0){
-        mutex_lock(&(s->sem_queue_mutex));
-        queue_t* queue_e = *(s->sem_queue);
-        if(queue_e==NULL){
+        // mutex_lock(&(s->sem_queue_mutex));
+        task_t* queue_t_e = *(s->sem_t_queue);
+
+        if(queue_t_e==NULL){
             return -1;
         }
-        // while (queue_e->prev!=NULL)
-        // {
-        //     queue_e=queue_e->prev;
-        // }
 
-        queue_e = queue_remove (s->sem_queue, queue_e) ;
-        if(queue_e==NULL){
-            mutex_unlock(&(s->sem_queue_mutex));
-            // #ifdef DEBUG
+        queue_t_e = (task_t*) queue_remove ((queue_t**)(s->sem_t_queue),(queue_t*) queue_t_e) ;
+        queue_append((queue_t**)&(readyQueue),(queue_t*) queue_t_e);
+        if(queue_t_e==NULL){
+            // mutex_unlock(&(s->sem_queue_mutex));
+            #ifdef DEBUG
                 printf("\nsem_up - FILA VAZIA - [%d]", taskExec->id);
-            // #endif
+            #endif
             return -1;
         }
 
-        while (s->removed_element!=NULL)
-        {
-            mutex_unlock(&(s->sem_queue_mutex));
-            mutex_lock(&(s->sem_queue_mutex));
-        }
-        s->removed_element=queue_e;
-        mutex_unlock(&(s->sem_queue_mutex));
+        // task_resume(queue_t_e);
+        s->active=1;
+        PPOS_PREEMPT_ENABLE 
+        // mutex_unlock(&(s->sem_mutex));
+        // mutex_unlock(&(s->sem_queue_mutex));
+        // if(s->sem_queue_ready==NULL){printf("\n NULLL");}
+
+        // if(*(s->sem_queue_ready)==NULL){
+        //     queue_e->prev=queue_e;
+        //     queue_e->next=queue_e;
+        //     *(s->sem_queue_ready)=queue_e; //insere primeiro elemento na fila
+        // }
+        // else{
+        //     queue_append(s->sem_queue_ready,queue_e);
+        // }
+        // while (s->removed_element!=NULL)
+        // {
+        //     mutex_unlock(&(s->sem_queue_mutex));
+        //     mutex_lock(&(s->sem_queue_mutex));
+        // }
+        // s->removed_element=queue_e;
+        // mutex_unlock(&(s->sem_queue_mutex));
     }
+    else{
+        PPOS_PREEMPT_ENABLE
+        s->active=1;
+    }
+    // mutex_unlock(&(s->sem_queue_mutex));
     after_sem_up(s);
     return 0;
 
@@ -346,29 +395,43 @@ int sem_destroy (semaphore_t *s){
 
     before_sem_destroy(s);
     mutex_destroy(&(s->sem_mutex));
-    mutex_destroy(&(s->sem_queue_mutex));
+    // mutex_destroy(&(s->sem_queue_mutex));
     s->sem_state=-__INT_MAX__;
     s->sem_id=0;
+    s->active='n';
     // queue_t** sem_queue;
-    if(s->removed_element!=NULL)
-    {
-        free(s->removed_element);
-        s->removed_element=NULL;
-    }
-    queue_t* queue_p = *(s->sem_queue);
+    // if(s->removed_element!=NULL)
+    // {
+    //     free(s->removed_element);
+    //     s->removed_element=NULL;
+    // // }
+    // queue_t* queue_p = *(s->sem_queue);
 
-    while (queue_p!=NULL)
+    // while (queue_p!=NULL)
+    // {
+    //     queue_t* queue_a=queue_p->next;
+    //     if(queue_p==queue_a){
+    //         queue_a=NULL;
+    //     }
+    //     queue_p=queue_remove(s->sem_queue,queue_p);
+    //     free(queue_p);
+    //     queue_p=queue_a;
+    // }
+
+    // free(s->sem_queue);
+
+    // s->active='n';
+
+    task_t* queue_t_e = *(s->sem_t_queue);
+
+    while(queue_t_e!=NULL)
     {
-        queue_t* queue_a=queue_p->next;
-        if(queue_p==queue_a){
-            queue_a=NULL;
-        }
-        queue_p=queue_remove(s->sem_queue,queue_p);
-        free(queue_p);
-        queue_p=queue_a;
+        queue_t_e = (task_t*) queue_remove ((queue_t**)(s->sem_t_queue),(queue_t*) queue_t_e) ;
+        queue_append((queue_t**)&(sleepQueue),(queue_t*) queue_t_e);
+        queue_t_e = *(s->sem_t_queue);
     }
 
-    free(s->sem_queue);
+
     after_sem_destroy(s);
     return 0;
 }
@@ -429,11 +492,11 @@ int mutex_lock (mutex_t *m) {
     // mutex_create(m);
     if (m==NULL)
         return -1;
-    while (__atomic_test_and_set(&(m->mtx_locked), __ATOMIC_SEQ_CST)) {}
+    while (__atomic_test_and_set(&(m->mtx_locked), __ATOMIC_SEQ_CST)) {task_yield();}
     //    { task_sleep(1); task_yield(); }
     // while (m->mtx_locked==0) { }
         // task_yield();    
-    m->mtx_locked=1;
+    // m->mtx_locked=1;
     after_mutex_lock(m);
     return 0;
 }
@@ -460,10 +523,10 @@ int mutex_unlock (mutex_t *m){
     before_mutex_unlock(m);
     if (m==NULL)
         return -1;
-    if (m->mtx_locked==0)
-        return -1;
+    // if (m->mtx_locked==0)
+    //     return -1;
     __atomic_clear(&(m->mtx_locked), __ATOMIC_SEQ_CST);
-
+    // task_yield();
     // m->mtx_locked=0;
     after_mutex_unlock(m);
     return 0;
@@ -490,7 +553,7 @@ int mutex_destroy (mutex_t *m) {
     before_mutex_destroy(m);
     if (m==NULL)
         return -1;
-    mutex_lock(m);
+    // mutex_lock(m);
     // free(m);
     // m=NULL;
     after_mutex_destroy(m);

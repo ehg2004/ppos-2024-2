@@ -3,7 +3,7 @@ TARGET = pingpongos
 BUILD_PATH = build/
 INCLUDE_PATH= ./include/
 
-SRC = ./src/ppos-core-aux.c ./src/pingpong-mqueue.c
+SRC = ./src/ppos-core-aux.c ./src/pingpong-semaphore.c
 
 OBJ = $(wildcard ./$(BUILD_PATH)*.o)
 
@@ -18,9 +18,14 @@ INC= -I$(INCLUDE_PATH)
 CC = gcc
 
 # Add -g flag for debugging
-CFLAGS = -o $(TARGET) -Wall -O0 -g
+CFLAGS = -o $(TARGET) -Wall -O0 -g -lm
 
-all: build
+# all: build
+
+all:
+	gcc -o pingpongos ppos-core-aux.c pingpong-mqueue.c  ppos-all.o queue.o -lm -Wall -O0 -g
+
+
 
 build: build_lib
 	$(CC)   $(SRC)  $(LIB) $(CFLAGS) $(INC)

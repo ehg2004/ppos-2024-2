@@ -62,8 +62,8 @@ int main (int argc, char *argv[])
    
    printf ("Main waits for A1...\n") ;
    task_join (&a1) ;
-   sem_destroy (&s1) ;
-   sem_destroy (&s2) ;
+   // sem_destroy (&s1) ;
+   // sem_destroy (&s2) ;
    printf ("Main waits for A2...\n") ;
    task_join (&a2) ;
    printf ("Main waits for B1...\n") ;

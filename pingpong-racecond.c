@@ -8,10 +8,10 @@
 #warning Este codigo foi planejado para ambientes UNIX (LInux, *BSD, MacOS). A compilacao e execucao em outros ambientes e responsabilidade do usuario.
 #endif
 
-// #define NUMTASKS 133
-// #define NUMSTEPS 39373
-#define NUMTASKS 100
-#define NUMSTEPS 10000
+#define NUMTASKS 133
+#define NUMSTEPS 39373
+// #define NUMTASKS 100
+// #define NUMSTEPS 100
 
 
 task_t task[NUMTASKS] ;

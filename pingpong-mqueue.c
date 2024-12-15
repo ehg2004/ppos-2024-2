@@ -45,7 +45,7 @@ void somaBody (void * arg)
    for (i=0; i<10; i++)
    {
       // recebe tres valores inteiros
-      mqueue_recv (&queueValores, &v1) ;
+      printf("\n %d",mqueue_recv (&queueValores, &v1)) ;
       printf ("               T%d: recebeu %d\n", task_id(), v1) ;
       mqueue_recv (&queueValores, &v2) ;
       printf ("               T%d: recebeu %d\n", task_id(), v2) ;
@@ -53,9 +53,9 @@ void somaBody (void * arg)
       printf ("               T%d: recebeu %d\n", task_id(), v3) ;
 
       // calcula a soma e sua raiz
-      soma = v1 + v2 + v3 ;
+      soma =(double)( v1 + v2 + v3 );
       // raiz = sqrt (soma) ;
-      raiz =  (soma) ;
+      raiz =  sqrt(soma) ;
 
       printf ("               T%d: %d+%d+%d = %f (raiz %f)\n",
 	      task_id(), v1, v2, v3, soma, raiz) ;
