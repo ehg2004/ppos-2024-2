@@ -313,8 +313,6 @@ int sem_up (semaphore_t *s){
     {
         return -1;
     }
-
-
     PPOS_PREEMPT_DISABLE
     before_sem_up(s);
     // while (s->active!=0){ task_yield();}
@@ -427,7 +425,8 @@ int sem_destroy (semaphore_t *s){
     while(queue_t_e!=NULL)
     {
         queue_t_e = (task_t*) queue_remove ((queue_t**)(s->sem_t_queue),(queue_t*) queue_t_e) ;
-        queue_append((queue_t**)&(sleepQueue),(queue_t*) queue_t_e);
+        // queue_append((queue_t**)&(sleepQueue),(queue_t*) queue_t_e);
+        task_resume(queue_t_e);
         queue_t_e = *(s->sem_t_queue);
     }
 

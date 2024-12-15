@@ -45,7 +45,7 @@ void somaBody (void * arg)
    for (i=0; i<10; i++)
    {
       // recebe tres valores inteiros
-      printf("\n %d",mqueue_recv (&queueValores, &v1)) ;
+      mqueue_recv (&queueValores, &v1);
       printf ("               T%d: recebeu %d\n", task_id(), v1) ;
       mqueue_recv (&queueValores, &v2) ;
       printf ("               T%d: recebeu %d\n", task_id(), v2) ;
