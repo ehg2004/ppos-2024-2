@@ -43,11 +43,9 @@ typedef struct {
     int sem_state;
     int sem_id;
     int sem_q_counter;
-    mutex_t sem_mutex;
-    mutex_t sem_queue_mutex;
     queue_t** sem_queue;
-    queue_t* removed_element;
     queue_t** sem_queue_ready;
+    queue_t* removed_element;
     task_t**   sem_t_queue;
     unsigned char active;
 

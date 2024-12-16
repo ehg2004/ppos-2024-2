@@ -26,7 +26,7 @@ CFLAGS = -o $(TARGET)  -lm -Wall -O0 -g
 # all: build
 
 all:
-	gcc -o pingpongos ppos-core-aux.c pingpong-mqueue.c  ppos-all.o queue.o -lm -Wall -O0 -g
+	gcc -o pingpongos ppos-core-aux.c pingpong-semaphore.c  ppos-all.o queue.o -lm -Wall -O0 -g
 
 
 
