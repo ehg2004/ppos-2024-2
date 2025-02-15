@@ -13,11 +13,8 @@ void TaskA (void * arg)
    for (i=0; i<10; i++)
    {
       sem_down(&s1) ;
-      // task_sleep (1) ;
       printf ("\n[%06d] %s zig (%d)", systime(), (char *) arg, i) ; fflush(stdout);
-      // task_sleep (1) ;
       sem_up (&s2) ;
-      // task_sleep (1) ;
       task_yield();
    }
    task_exit (0) ;
@@ -30,10 +27,9 @@ void TaskB (void * arg)
    for (i=0; i<10; i++)
    {
       sem_down (&s2) ;
-      // task_sleep (1) ;
       printf ("\n[%06d] %s zag (%d)", systime(), (char *) arg, i) ; fflush(stdout);
       sem_up (&s1) ;
-      // task_sleep (1) ;
+      //task_sleep (1) ;
       task_yield();
    }
    task_exit (0) ;
@@ -62,8 +58,8 @@ int main (int argc, char *argv[])
    
    printf ("Main waits for A1...\n") ;
    task_join (&a1) ;
-   // sem_destroy (&s1) ;
-   // sem_destroy (&s2) ;
+   sem_destroy (&s1) ;
+   sem_destroy (&s2) ;
    printf ("Main waits for A2...\n") ;
    task_join (&a2) ;
    printf ("Main waits for B1...\n") ;

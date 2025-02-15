@@ -1,0 +1,771 @@
+    0 ms: main inicio
+    1 ms: disco contem 256 blocos de 64 bytes cada
+    1 ms: lendo bloco 0
+   37 ms: buffer: [++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++]
+   38 ms: lendo bloco 1
+   70 ms: buffer: [9999999999999999999999999999999999999999999999999999999999999999]
+   71 ms: lendo bloco 2
+  101 ms: buffer: [2222222222222222222222222222222222222222222222222222222222222222]
+  104 ms: lendo bloco 3
+  137 ms: buffer: [<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<]
+  139 ms: lendo bloco 4
+  187 ms: buffer: [6666666666666666666666666666666666666666666666666666666666666666]
+  189 ms: lendo bloco 5
+  218 ms: buffer: [FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF]
+  223 ms: lendo bloco 6
+  258 ms: buffer: [))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))]
+  259 ms: lendo bloco 7
+  291 ms: buffer: [""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""]
+  292 ms: lendo bloco 8
+  347 ms: buffer: ['''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''']
+  347 ms: lendo bloco 9
+  387 ms: buffer: [----------------------------------------------------------------]
+  388 ms: lendo bloco 10
+  440 ms: buffer: [JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ]
+  441 ms: lendo bloco 11
+  496 ms: buffer: [,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,]
+  497 ms: lendo bloco 12
+  542 ms: buffer: [!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!]
+  543 ms: lendo bloco 13
+  585 ms: buffer: [????????????????????????????????????????????????????????????????]
+  585 ms: lendo bloco 14
+  627 ms: buffer: [LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL]
+  628 ms: lendo bloco 15
+  675 ms: buffer: [7777777777777777777777777777777777777777777777777777777777777777]
+  676 ms: lendo bloco 16
+  713 ms: buffer: [@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@]
+  714 ms: lendo bloco 17
+  766 ms: buffer: [                                                                ]
+  767 ms: lendo bloco 18
+  803 ms: buffer: [9999999999999999999999999999999999999999999999999999999999999999]
+  804 ms: lendo bloco 19
+  857 ms: buffer: [""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""]
+  857 ms: lendo bloco 20
+  913 ms: buffer: [!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!]
+  914 ms: lendo bloco 21
+  964 ms: buffer: [((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((]
+  965 ms: lendo bloco 22
+ 1022 ms: buffer: [%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%]
+ 1022 ms: lendo bloco 23
+ 1077 ms: buffer: [0000000000000000000000000000000000000000000000000000000000000000]
+ 1078 ms: lendo bloco 24
+ 1124 ms: buffer: [5555555555555555555555555555555555555555555555555555555555555555]
+ 1125 ms: lendo bloco 25
+ 1173 ms: buffer: [6666666666666666666666666666666666666666666666666666666666666666]
+ 1174 ms: lendo bloco 26
+ 1229 ms: buffer: [&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&]
+ 1230 ms: lendo bloco 27
+ 1271 ms: buffer: [!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!]
+ 1272 ms: lendo bloco 28
+ 1306 ms: buffer: [1111111111111111111111111111111111111111111111111111111111111111]
+ 1306 ms: lendo bloco 29
+ 1352 ms: buffer: [9999999999999999999999999999999999999999999999999999999999999999]
+ 1352 ms: lendo bloco 30
+ 1388 ms: buffer: [????????????????????????????????????????????????????????????????]
+ 1389 ms: lendo bloco 31
+ 1427 ms: buffer: [$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$]
+ 1428 ms: lendo bloco 32
+ 1475 ms: buffer: [@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@]
+ 1475 ms: lendo bloco 33
+ 1529 ms: buffer: [CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC]
+ 1529 ms: lendo bloco 34
+ 1565 ms: buffer: [!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!]
+ 1566 ms: lendo bloco 35
+ 1602 ms: buffer: [8888888888888888888888888888888888888888888888888888888888888888]
+ 1603 ms: lendo bloco 36
+ 1659 ms: buffer: [>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>]
+ 1660 ms: lendo bloco 37
+ 1701 ms: buffer: [LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL]
+ 1701 ms: lendo bloco 38
+ 1735 ms: buffer: [::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::]
+ 1736 ms: lendo bloco 39
+ 1788 ms: buffer: [0000000000000000000000000000000000000000000000000000000000000000]
+ 1788 ms: lendo bloco 40
+ 1831 ms: buffer: [IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII]
+ 1832 ms: lendo bloco 41
+ 1887 ms: buffer: [>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>]
+ 1888 ms: lendo bloco 42
+ 1936 ms: buffer: [((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((]
+ 1937 ms: lendo bloco 43
+ 1970 ms: buffer: [FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF]
+ 1971 ms: lendo bloco 44
+ 2012 ms: buffer: [                                                                ]
+ 2012 ms: lendo bloco 45
+ 2067 ms: buffer: [7777777777777777777777777777777777777777777777777777777777777777]
+ 2067 ms: lendo bloco 46
+ 2106 ms: buffer: [????????????????????????????????????????????????????????????????]
+ 2107 ms: lendo bloco 47
+ 2140 ms: buffer: [@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@]
+ 2142 ms: lendo bloco 48
+ 2183 ms: buffer: [                                                                ]
+ 2184 ms: lendo bloco 49
+ 2235 ms: buffer: [HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH]
+ 2236 ms: lendo bloco 50
+ 2275 ms: buffer: [HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH]
+ 2276 ms: lendo bloco 51
+ 2319 ms: buffer: [CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC]
+ 2320 ms: lendo bloco 52
+ 2357 ms: buffer: [AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]
+ 2358 ms: lendo bloco 53
+ 2397 ms: buffer: [::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::]
+ 2397 ms: lendo bloco 54
+ 2439 ms: buffer: [,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,]
+ 2440 ms: lendo bloco 55
+ 2492 ms: buffer: [KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK]
+ 2493 ms: lendo bloco 56
+ 2542 ms: buffer: [0000000000000000000000000000000000000000000000000000000000000000]
+ 2543 ms: lendo bloco 57
+ 2573 ms: buffer: [EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE]
+ 2574 ms: lendo bloco 58
+ 2609 ms: buffer: [::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::]
+ 2610 ms: lendo bloco 59
+ 2662 ms: buffer: [BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB]
+ 2663 ms: lendo bloco 60
+ 2712 ms: buffer: [;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;]
+ 2713 ms: lendo bloco 61
+ 2757 ms: buffer: [JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ]
+ 2758 ms: lendo bloco 62
+ 2790 ms: buffer: [$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$]
+ 2790 ms: lendo bloco 63
+ 2829 ms: buffer: [****************************************************************]
+ 2830 ms: lendo bloco 64
+ 2866 ms: buffer: [----------------------------------------------------------------]
+ 2867 ms: lendo bloco 65
+ 2901 ms: buffer: [EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE]
+ 2902 ms: lendo bloco 66
+ 2943 ms: buffer: [CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC]
+ 2944 ms: lendo bloco 67
+ 2978 ms: buffer: [MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM]
+ 2978 ms: lendo bloco 68
+ 3019 ms: buffer: [8888888888888888888888888888888888888888888888888888888888888888]
+ 3020 ms: lendo bloco 69
+ 3064 ms: buffer: [!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!]
+ 3065 ms: lendo bloco 70
+ 3119 ms: buffer: [""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""]
+ 3120 ms: lendo bloco 71
+ 3173 ms: buffer: [IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII]
+ 3174 ms: lendo bloco 72
+ 3200 ms: buffer: [FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF]
+ 3200 ms: lendo bloco 73
+ 3237 ms: buffer: [++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++]
+ 3238 ms: lendo bloco 74
+ 3285 ms: buffer: [JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ]
+ 3286 ms: lendo bloco 75
+ 3329 ms: buffer: [;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;]
+ 3330 ms: lendo bloco 76
+ 3362 ms: buffer: [6666666666666666666666666666666666666666666666666666666666666666]
+ 3363 ms: lendo bloco 77
+ 3399 ms: buffer: [////////////////////////////////////////////////////////////////]
+ 3400 ms: lendo bloco 78
+ 3431 ms: buffer: [                                                                ]
+ 3432 ms: lendo bloco 79
+ 3483 ms: buffer: [OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO]
+ 3484 ms: lendo bloco 80
+ 3511 ms: buffer: [LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL]
+ 3512 ms: lendo bloco 81
+ 3548 ms: buffer: [CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC]
+ 3549 ms: lendo bloco 82
+ 3582 ms: buffer: [================================================================]
+ 3583 ms: lendo bloco 83
+ 3619 ms: buffer: [4444444444444444444444444444444444444444444444444444444444444444]
+ 3620 ms: lendo bloco 84
+ 3664 ms: buffer: [HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH]
+ 3665 ms: lendo bloco 85
+ 3711 ms: buffer: [9999999999999999999999999999999999999999999999999999999999999999]
+ 3712 ms: lendo bloco 86
+ 3746 ms: buffer: [BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB]
+ 3747 ms: lendo bloco 87
+ 3788 ms: buffer: [<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<]
+ 3788 ms: lendo bloco 88
+ 3842 ms: buffer: [1111111111111111111111111111111111111111111111111111111111111111]
+ 3842 ms: lendo bloco 89
+ 3883 ms: buffer: [9999999999999999999999999999999999999999999999999999999999999999]
+ 3884 ms: lendo bloco 90
+ 3919 ms: buffer: [4444444444444444444444444444444444444444444444444444444444444444]
+ 3920 ms: lendo bloco 91
+ 3966 ms: buffer: [0000000000000000000000000000000000000000000000000000000000000000]
+ 3967 ms: lendo bloco 92
+ 4018 ms: buffer: [IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII]
+ 4019 ms: lendo bloco 93
+ 4051 ms: buffer: [5555555555555555555555555555555555555555555555555555555555555555]
+ 4052 ms: lendo bloco 94
+ 4102 ms: buffer: [9999999999999999999999999999999999999999999999999999999999999999]
+ 4103 ms: lendo bloco 95
+ 4160 ms: buffer: [7777777777777777777777777777777777777777777777777777777777777777]
+ 4161 ms: lendo bloco 96
+ 4193 ms: buffer: [8888888888888888888888888888888888888888888888888888888888888888]
+ 4194 ms: lendo bloco 97
+ 4228 ms: buffer: [$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$]
+ 4229 ms: lendo bloco 98
+ 4284 ms: buffer: [KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK]
+ 4285 ms: lendo bloco 99
+ 4327 ms: buffer: [JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ]
+ 4328 ms: lendo bloco 100
+ 4372 ms: buffer: [................................................................]
+ 4373 ms: lendo bloco 101
+ 4420 ms: buffer: [MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM]
+ 4421 ms: lendo bloco 102
+ 4459 ms: buffer: [&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&]
+ 4459 ms: lendo bloco 103
+ 4510 ms: buffer: [))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))]
+ 4511 ms: lendo bloco 104
+ 4543 ms: buffer: [!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!]
+ 4544 ms: lendo bloco 105
+ 4577 ms: buffer: [BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB]
+ 4578 ms: lendo bloco 106
+ 4616 ms: buffer: [FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF]
+ 4617 ms: lendo bloco 107
+ 4657 ms: buffer: [@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@]
+ 4657 ms: lendo bloco 108
+ 4697 ms: buffer: [!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!]
+ 4697 ms: lendo bloco 109
+ 4735 ms: buffer: [IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII]
+ 4736 ms: lendo bloco 110
+ 4772 ms: buffer: [IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII]
+ 4773 ms: lendo bloco 111
+ 4809 ms: buffer: [OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO]
+ 4810 ms: lendo bloco 112
+ 4856 ms: buffer: [::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::]
+ 4856 ms: lendo bloco 113
+ 4898 ms: buffer: ['''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''']
+ 4899 ms: lendo bloco 114
+ 4941 ms: buffer: [----------------------------------------------------------------]
+ 4942 ms: lendo bloco 115
+ 4973 ms: buffer: [((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((]
+ 4974 ms: lendo bloco 116
+ 5006 ms: buffer: [EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE]
+ 5007 ms: lendo bloco 117
+ 5052 ms: buffer: [,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,]
+ 5052 ms: lendo bloco 118
+ 5089 ms: buffer: [????????????????????????????????????????????????????????????????]
+ 5090 ms: lendo bloco 119
+ 5143 ms: buffer: [2222222222222222222222222222222222222222222222222222222222222222]
+ 5144 ms: lendo bloco 120
+ 5195 ms: buffer: ['''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''']
+ 5196 ms: lendo bloco 121
+ 5233 ms: buffer: [EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE]
+ 5234 ms: lendo bloco 122
+ 5273 ms: buffer: [&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&]
+ 5274 ms: lendo bloco 123
+ 5320 ms: buffer: [,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,]
+ 5320 ms: lendo bloco 124
+ 5359 ms: buffer: [::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::]
+ 5360 ms: lendo bloco 125
+ 5392 ms: buffer: [BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB]
+ 5393 ms: lendo bloco 126
+ 5435 ms: buffer: [%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%]
+ 5436 ms: lendo bloco 127
+ 5473 ms: buffer: [5555555555555555555555555555555555555555555555555555555555555555]
+ 5474 ms: lendo bloco 128
+ 5505 ms: buffer: [5555555555555555555555555555555555555555555555555555555555555555]
+ 5505 ms: lendo bloco 129
+ 5537 ms: buffer: [%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%]
+ 5538 ms: lendo bloco 130
+ 5581 ms: buffer: [MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM]
+ 5582 ms: lendo bloco 131
+ 5622 ms: buffer: [NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN]
+ 5623 ms: lendo bloco 132
+ 5676 ms: buffer: [################################################################]
+ 5676 ms: lendo bloco 133
+ 5722 ms: buffer: [----------------------------------------------------------------]
+ 5722 ms: lendo bloco 134
+ 5750 ms: buffer: [OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO]
+ 5751 ms: lendo bloco 135
+ 5782 ms: buffer: [""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""]
+ 5782 ms: lendo bloco 136
+ 5825 ms: buffer: [CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC]
+ 5826 ms: lendo bloco 137
+ 5863 ms: buffer: [CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC]
+ 5863 ms: lendo bloco 138
+ 5898 ms: buffer: [----------------------------------------------------------------]
+ 5899 ms: lendo bloco 139
+ 5945 ms: buffer: [AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]
+ 5945 ms: lendo bloco 140
+ 5979 ms: buffer: [5555555555555555555555555555555555555555555555555555555555555555]
+ 5980 ms: lendo bloco 141
+ 6022 ms: buffer: [KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK]
+ 6022 ms: lendo bloco 142
+ 6051 ms: buffer: [DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD]
+ 6052 ms: lendo bloco 143
+ 6108 ms: buffer: [::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::]
+ 6109 ms: lendo bloco 144
+ 6158 ms: buffer: [LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL]
+ 6159 ms: lendo bloco 145
+ 6201 ms: buffer: [<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<]
+ 6202 ms: lendo bloco 146
+ 6233 ms: buffer: [>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>]
+ 6233 ms: lendo bloco 147
+ 6283 ms: buffer: [,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,]
+ 6284 ms: lendo bloco 148
+ 6341 ms: buffer: [4444444444444444444444444444444444444444444444444444444444444444]
+ 6342 ms: lendo bloco 149
+ 6379 ms: buffer: [$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$]
+ 6380 ms: lendo bloco 150
+ 6424 ms: buffer: [9999999999999999999999999999999999999999999999999999999999999999]
+ 6425 ms: lendo bloco 151
+ 6477 ms: buffer: [IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII]
+ 6478 ms: lendo bloco 152
+ 6518 ms: buffer: [NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN]
+ 6518 ms: lendo bloco 153
+ 6566 ms: buffer: [FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF]
+ 6567 ms: lendo bloco 154
+ 6604 ms: buffer: [,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,]
+ 6605 ms: lendo bloco 155
+ 6651 ms: buffer: [DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD]
+ 6652 ms: lendo bloco 156
+ 6697 ms: buffer: [****************************************************************]
+ 6698 ms: lendo bloco 157
+ 6740 ms: buffer: [KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK]
+ 6741 ms: lendo bloco 158
+ 6793 ms: buffer: [                                                                ]
+ 6793 ms: lendo bloco 159
+ 6839 ms: buffer: [IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII]
+ 6840 ms: lendo bloco 160
+ 6888 ms: buffer: [6666666666666666666666666666666666666666666666666666666666666666]
+ 6890 ms: lendo bloco 161
+ 6926 ms: buffer: [&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&]
+ 6927 ms: lendo bloco 162
+ 6980 ms: buffer: [@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@]
+ 6980 ms: lendo bloco 163
+ 7026 ms: buffer: [5555555555555555555555555555555555555555555555555555555555555555]
+ 7026 ms: lendo bloco 164
+ 7056 ms: buffer: [----------------------------------------------------------------]
+ 7056 ms: lendo bloco 165
+ 7109 ms: buffer: [8888888888888888888888888888888888888888888888888888888888888888]
+ 7110 ms: lendo bloco 166
+ 7157 ms: buffer: [                                                                ]
+ 7158 ms: lendo bloco 167
+ 7202 ms: buffer: [CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC]
+ 7203 ms: lendo bloco 168
+ 7238 ms: buffer: [NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN]
+ 7239 ms: lendo bloco 169
+ 7287 ms: buffer: [JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ]
+ 7287 ms: lendo bloco 170
+ 7323 ms: buffer: [!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!]
+ 7323 ms: lendo bloco 171
+ 7366 ms: buffer: [;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;]
+ 7367 ms: lendo bloco 172
+ 7423 ms: buffer: [................................................................]
+ 7424 ms: lendo bloco 173
+ 7466 ms: buffer: [KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK]
+ 7467 ms: lendo bloco 174
+ 7509 ms: buffer: [<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<]
+ 7510 ms: lendo bloco 175
+ 7558 ms: buffer: [::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::]
+ 7558 ms: lendo bloco 176
+ 7607 ms: buffer: [9999999999999999999999999999999999999999999999999999999999999999]
+ 7608 ms: lendo bloco 177
+ 7636 ms: buffer: [FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF]
+ 7637 ms: lendo bloco 178
+ 7671 ms: buffer: [DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD]
+ 7671 ms: lendo bloco 179
+ 7715 ms: buffer: [................................................................]
+ 7716 ms: lendo bloco 180
+ 7756 ms: buffer: [5555555555555555555555555555555555555555555555555555555555555555]
+ 7757 ms: lendo bloco 181
+ 7805 ms: buffer: ['''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''']
+ 7806 ms: lendo bloco 182
+ 7844 ms: buffer: [GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG]
+ 7845 ms: lendo bloco 183
+ 7888 ms: buffer: [DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD]
+ 7888 ms: lendo bloco 184
+ 7927 ms: buffer: [EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE]
+ 7927 ms: lendo bloco 185
+ 7970 ms: buffer: [????????????????????????????????????????????????????????????????]
+ 7971 ms: lendo bloco 186
+ 8007 ms: buffer: [----------------------------------------------------------------]
+ 8008 ms: lendo bloco 187
+ 8061 ms: buffer: [BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB]
+ 8062 ms: lendo bloco 188
+ 8093 ms: buffer: [1111111111111111111111111111111111111111111111111111111111111111]
+ 8093 ms: lendo bloco 189
+ 8125 ms: buffer: [))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))]
+ 8126 ms: lendo bloco 190
+ 8164 ms: buffer: [AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]
+ 8165 ms: lendo bloco 191
+ 8215 ms: buffer: [@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@]
+ 8216 ms: lendo bloco 192
+ 8252 ms: buffer: [$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$]
+ 8253 ms: lendo bloco 193
+ 8287 ms: buffer: [4444444444444444444444444444444444444444444444444444444444444444]
+ 8288 ms: lendo bloco 194
+ 8323 ms: buffer: [2222222222222222222222222222222222222222222222222222222222222222]
+ 8324 ms: lendo bloco 195
+ 8358 ms: buffer: [))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))]
+ 8359 ms: lendo bloco 196
+ 8390 ms: buffer: [((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((]
+ 8391 ms: lendo bloco 197
+ 8442 ms: buffer: [================================================================]
+ 8444 ms: lendo bloco 198
+ 8490 ms: buffer: [LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL]
+ 8490 ms: lendo bloco 199
+ 8518 ms: buffer: [5555555555555555555555555555555555555555555555555555555555555555]
+ 8518 ms: lendo bloco 200
+ 8562 ms: buffer: [@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@]
+ 8563 ms: lendo bloco 201
+ 8614 ms: buffer: ['''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''']
+ 8614 ms: lendo bloco 202
+ 8654 ms: buffer: [????????????????????????????????????????????????????????????????]
+ 8655 ms: lendo bloco 203
+ 8698 ms: buffer: [HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH]
+ 8698 ms: lendo bloco 204
+ 8734 ms: buffer: [GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG]
+ 8735 ms: lendo bloco 205
+ 8787 ms: buffer: [>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>]
+ 8788 ms: lendo bloco 206
+ 8843 ms: buffer: [4444444444444444444444444444444444444444444444444444444444444444]
+ 8844 ms: lendo bloco 207
+ 8899 ms: buffer: [DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD]
+ 8900 ms: lendo bloco 208
+ 8934 ms: buffer: [4444444444444444444444444444444444444444444444444444444444444444]
+ 8934 ms: lendo bloco 209
+ 8971 ms: buffer: [1111111111111111111111111111111111111111111111111111111111111111]
+ 8971 ms: lendo bloco 210
+ 9013 ms: buffer: [;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;]
+ 9013 ms: lendo bloco 211
+ 9045 ms: buffer: [OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO]
+ 9046 ms: lendo bloco 212
+ 9088 ms: buffer: [<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<]
+ 9089 ms: lendo bloco 213
+ 9131 ms: buffer: [################################################################]
+ 9132 ms: lendo bloco 214
+ 9166 ms: buffer: [................................................................]
+ 9167 ms: lendo bloco 215
+ 9194 ms: buffer: [9999999999999999999999999999999999999999999999999999999999999999]
+ 9194 ms: lendo bloco 216
+ 9228 ms: buffer: [NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN]
+ 9229 ms: lendo bloco 217
+ 9267 ms: buffer: [KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK]
+ 9267 ms: lendo bloco 218
+ 9309 ms: buffer: [::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::]
+ 9312 ms: lendo bloco 219
+ 9347 ms: buffer: [NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN]
+ 9347 ms: lendo bloco 220
+ 9385 ms: buffer: [4444444444444444444444444444444444444444444444444444444444444444]
+ 9386 ms: lendo bloco 221
+ 9415 ms: buffer: [++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++]
+ 9416 ms: lendo bloco 222
+ 9473 ms: buffer: [****************************************************************]
+ 9474 ms: lendo bloco 223
+ 9520 ms: buffer: [1111111111111111111111111111111111111111111111111111111111111111]
+ 9521 ms: lendo bloco 224
+ 9558 ms: buffer: [GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG]
+ 9559 ms: lendo bloco 225
+ 9596 ms: buffer: [EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE]
+ 9597 ms: lendo bloco 226
+ 9636 ms: buffer: [NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN]
+ 9637 ms: lendo bloco 227
+ 9665 ms: buffer: [6666666666666666666666666666666666666666666666666666666666666666]
+ 9666 ms: lendo bloco 228
+ 9713 ms: buffer: [!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!]
+ 9714 ms: lendo bloco 229
+ 9741 ms: buffer: [2222222222222222222222222222222222222222222222222222222222222222]
+ 9741 ms: lendo bloco 230
+ 9770 ms: buffer: [BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB]
+ 9770 ms: lendo bloco 231
+ 9808 ms: buffer: [MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM]
+ 9809 ms: lendo bloco 232
+ 9842 ms: buffer: [;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;]
+ 9843 ms: lendo bloco 233
+ 9874 ms: buffer: [>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>]
+ 9875 ms: lendo bloco 234
+ 9908 ms: buffer: [KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK]
+ 9909 ms: lendo bloco 235
+ 9953 ms: buffer: [((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((]
+ 9954 ms: lendo bloco 236
+ 9989 ms: buffer: [HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH]
+ 9990 ms: lendo bloco 237
+10039 ms: buffer: [7777777777777777777777777777777777777777777777777777777777777777]
+10040 ms: lendo bloco 238
+10092 ms: buffer: [""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""]
+10093 ms: lendo bloco 239
+10128 ms: buffer: [                                                                ]
+10129 ms: lendo bloco 240
+10183 ms: buffer: [,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,]
+10184 ms: lendo bloco 241
+10219 ms: buffer: [<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<]
+10219 ms: lendo bloco 242
+10252 ms: buffer: [****************************************************************]
+10253 ms: lendo bloco 243
+10299 ms: buffer: [$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$]
+10300 ms: lendo bloco 244
+10352 ms: buffer: [;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;]
+10353 ms: lendo bloco 245
+10390 ms: buffer: [JJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ]
+10391 ms: lendo bloco 246
+10430 ms: buffer: [1111111111111111111111111111111111111111111111111111111111111111]
+10431 ms: lendo bloco 247
+10456 ms: buffer: [>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>]
+10458 ms: lendo bloco 248
+10511 ms: buffer: [OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO]
+10511 ms: lendo bloco 249
+10558 ms: buffer: [""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""]
+10558 ms: lendo bloco 250
+10596 ms: buffer: [8888888888888888888888888888888888888888888888888888888888888888]
+10597 ms: lendo bloco 251
+10631 ms: buffer: [9999999999999999999999999999999999999999999999999999999999999999]
+10632 ms: lendo bloco 252
+10683 ms: buffer: [MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM]
+10684 ms: lendo bloco 253
+10721 ms: buffer: [2222222222222222222222222222222222222222222222222222222222222222]
+10721 ms: lendo bloco 254
+10765 ms: buffer: [::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::]
+10766 ms: lendo bloco 255
+10797 ms: buffer: [))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))]
+10797 ms: escrevendo bloco 0 com caracteres "*"
+11103 ms: escrevendo bloco 1 com caracteres "0"
+11139 ms: escrevendo bloco 2 com caracteres ","
+11196 ms: escrevendo bloco 3 com caracteres "@"
+11230 ms: escrevendo bloco 4 com caracteres ";"
+11254 ms: escrevendo bloco 5 com caracteres "*"
+11293 ms: escrevendo bloco 6 com caracteres "I"
+11336 ms: escrevendo bloco 7 com caracteres "F"
+11371 ms: escrevendo bloco 8 com caracteres "."
+11414 ms: escrevendo bloco 9 com caracteres "E"
+11449 ms: escrevendo bloco 10 com caracteres "&"
+11503 ms: escrevendo bloco 11 com caracteres ")"
+11545 ms: escrevendo bloco 12 com caracteres "7"
+11582 ms: escrevendo bloco 13 com caracteres "&"
+11631 ms: escrevendo bloco 14 com caracteres "A"
+11672 ms: escrevendo bloco 15 com caracteres "E"
+11731 ms: escrevendo bloco 16 com caracteres "A"
+11766 ms: escrevendo bloco 17 com caracteres "K"
+11803 ms: escrevendo bloco 18 com caracteres ":"
+11846 ms: escrevendo bloco 19 com caracteres ":"
+11884 ms: escrevendo bloco 20 com caracteres "<"
+11934 ms: escrevendo bloco 21 com caracteres "7"
+11963 ms: escrevendo bloco 22 com caracteres "C"
+11995 ms: escrevendo bloco 23 com caracteres "2"
+12036 ms: escrevendo bloco 24 com caracteres "'"
+12086 ms: escrevendo bloco 25 com caracteres "C"
+12119 ms: escrevendo bloco 26 com caracteres "&"
+12158 ms: escrevendo bloco 27 com caracteres "$"
+12197 ms: escrevendo bloco 28 com caracteres ":"
+12245 ms: escrevendo bloco 29 com caracteres "B"
+12281 ms: escrevendo bloco 30 com caracteres " "
+12309 ms: escrevendo bloco 31 com caracteres "G"
+12353 ms: escrevendo bloco 32 com caracteres "."
+12393 ms: escrevendo bloco 33 com caracteres "/"
+12423 ms: escrevendo bloco 34 com caracteres "="
+12453 ms: escrevendo bloco 35 com caracteres ">"
+12479 ms: escrevendo bloco 36 com caracteres "."
+12529 ms: escrevendo bloco 37 com caracteres "/"
+12557 ms: escrevendo bloco 38 com caracteres "B"
+12584 ms: escrevendo bloco 39 com caracteres "B"
+12621 ms: escrevendo bloco 40 com caracteres ")"
+12656 ms: escrevendo bloco 41 com caracteres "6"
+12690 ms: escrevendo bloco 42 com caracteres "C"
+12720 ms: escrevendo bloco 43 com caracteres "M"
+12744 ms: escrevendo bloco 44 com caracteres "5"
+12797 ms: escrevendo bloco 45 com caracteres "("
+12850 ms: escrevendo bloco 46 com caracteres "G"
+12901 ms: escrevendo bloco 47 com caracteres "7"
+12952 ms: escrevendo bloco 48 com caracteres "!"
+12991 ms: escrevendo bloco 49 com caracteres "N"
+13039 ms: escrevendo bloco 50 com caracteres "/"
+13069 ms: escrevendo bloco 51 com caracteres "("
+13106 ms: escrevendo bloco 52 com caracteres "!"
+13150 ms: escrevendo bloco 53 com caracteres "."
+13187 ms: escrevendo bloco 54 com caracteres "8"
+13227 ms: escrevendo bloco 55 com caracteres "L"
+13267 ms: escrevendo bloco 56 com caracteres "G"
+13302 ms: escrevendo bloco 57 com caracteres "1"
+13337 ms: escrevendo bloco 58 com caracteres "M"
+13384 ms: escrevendo bloco 59 com caracteres "7"
+13420 ms: escrevendo bloco 60 com caracteres "="
+13456 ms: escrevendo bloco 61 com caracteres "H"
+13497 ms: escrevendo bloco 62 com caracteres "?"
+13534 ms: escrevendo bloco 63 com caracteres ":"
+13586 ms: escrevendo bloco 64 com caracteres "E"
+13625 ms: escrevendo bloco 65 com caracteres "O"
+13677 ms: escrevendo bloco 66 com caracteres "D"
+13730 ms: escrevendo bloco 67 com caracteres "2"
+13766 ms: escrevendo bloco 68 com caracteres "."
+13810 ms: escrevendo bloco 69 com caracteres "H"
+13865 ms: escrevendo bloco 70 com caracteres "2"
+13915 ms: escrevendo bloco 71 com caracteres "H"
+13968 ms: escrevendo bloco 72 com caracteres "G"
+14007 ms: escrevendo bloco 73 com caracteres "3"
+14044 ms: escrevendo bloco 74 com caracteres "G"
+14098 ms: escrevendo bloco 75 com caracteres "7"
+14138 ms: escrevendo bloco 76 com caracteres "9"
+14172 ms: escrevendo bloco 77 com caracteres "I"
+14223 ms: escrevendo bloco 78 com caracteres "/"
+14255 ms: escrevendo bloco 79 com caracteres "9"
+14309 ms: escrevendo bloco 80 com caracteres "<"
+14358 ms: escrevendo bloco 81 com caracteres "*"
+14393 ms: escrevendo bloco 82 com caracteres "/"
+14436 ms: escrevendo bloco 83 com caracteres "6"
+14490 ms: escrevendo bloco 84 com caracteres "M"
+14531 ms: escrevendo bloco 85 com caracteres "3"
+14585 ms: escrevendo bloco 86 com caracteres "C"
+14627 ms: escrevendo bloco 87 com caracteres "H"
+14679 ms: escrevendo bloco 88 com caracteres "$"
+14731 ms: escrevendo bloco 89 com caracteres "O"
+14781 ms: escrevendo bloco 90 com caracteres "5"
+14826 ms: escrevendo bloco 91 com caracteres " "
+14876 ms: escrevendo bloco 92 com caracteres "&"
+14928 ms: escrevendo bloco 93 com caracteres "G"
+14973 ms: escrevendo bloco 94 com caracteres "M"
+14993 ms: escrevendo bloco 95 com caracteres "+"
+15016 ms: escrevendo bloco 96 com caracteres "8"
+15037 ms: escrevendo bloco 97 com caracteres "K"
+15080 ms: escrevendo bloco 98 com caracteres "1"
+15124 ms: escrevendo bloco 99 com caracteres "4"
+15157 ms: escrevendo bloco 100 com caracteres " "
+15206 ms: escrevendo bloco 101 com caracteres "."
+15254 ms: escrevendo bloco 102 com caracteres "C"
+15297 ms: escrevendo bloco 103 com caracteres ">"
+15352 ms: escrevendo bloco 104 com caracteres "B"
+15400 ms: escrevendo bloco 105 com caracteres "#"
+15456 ms: escrevendo bloco 106 com caracteres "4"
+15507 ms: escrevendo bloco 107 com caracteres "7"
+15557 ms: escrevendo bloco 108 com caracteres "-"
+15593 ms: escrevendo bloco 109 com caracteres "0"
+15637 ms: escrevendo bloco 110 com caracteres "O"
+15670 ms: escrevendo bloco 111 com caracteres "$"
+15703 ms: escrevendo bloco 112 com caracteres "@"
+15758 ms: escrevendo bloco 113 com caracteres "?"
+15799 ms: escrevendo bloco 114 com caracteres "A"
+15852 ms: escrevendo bloco 115 com caracteres "!"
+15907 ms: escrevendo bloco 116 com caracteres "+"
+15942 ms: escrevendo bloco 117 com caracteres "%"
+15985 ms: escrevendo bloco 118 com caracteres "F"
+16040 ms: escrevendo bloco 119 com caracteres "'"
+16082 ms: escrevendo bloco 120 com caracteres "!"
+16138 ms: escrevendo bloco 121 com caracteres "!"
+16184 ms: escrevendo bloco 122 com caracteres "N"
+16236 ms: escrevendo bloco 123 com caracteres "0"
+16277 ms: escrevendo bloco 124 com caracteres "6"
+16322 ms: escrevendo bloco 125 com caracteres "5"
+16354 ms: escrevendo bloco 126 com caracteres "L"
+16393 ms: escrevendo bloco 127 com caracteres "-"
+16436 ms: escrevendo bloco 128 com caracteres "I"
+16475 ms: escrevendo bloco 129 com caracteres "."
+16515 ms: escrevendo bloco 130 com caracteres "/"
+16568 ms: escrevendo bloco 131 com caracteres "L"
+16617 ms: escrevendo bloco 132 com caracteres "O"
+16660 ms: escrevendo bloco 133 com caracteres "*"
+16699 ms: escrevendo bloco 134 com caracteres "5"
+16736 ms: escrevendo bloco 135 com caracteres "N"
+16790 ms: escrevendo bloco 136 com caracteres ";"
+16845 ms: escrevendo bloco 137 com caracteres ","
+16889 ms: escrevendo bloco 138 com caracteres "7"
+16926 ms: escrevendo bloco 139 com caracteres "D"
+16968 ms: escrevendo bloco 140 com caracteres "-"
+17006 ms: escrevendo bloco 141 com caracteres "C"
+17038 ms: escrevendo bloco 142 com caracteres "D"
+17072 ms: escrevendo bloco 143 com caracteres "%"
+17115 ms: escrevendo bloco 144 com caracteres ","
+17168 ms: escrevendo bloco 145 com caracteres "H"
+17197 ms: escrevendo bloco 146 com caracteres "3"
+17219 ms: escrevendo bloco 147 com caracteres "G"
+17244 ms: escrevendo bloco 148 com caracteres "5"
+17274 ms: escrevendo bloco 149 com caracteres "H"
+17309 ms: escrevendo bloco 150 com caracteres "B"
+17337 ms: escrevendo bloco 151 com caracteres "2"
+17394 ms: escrevendo bloco 152 com caracteres "F"
+17440 ms: escrevendo bloco 153 com caracteres "7"
+17486 ms: escrevendo bloco 154 com caracteres ";"
+17512 ms: escrevendo bloco 155 com caracteres "+"
+17555 ms: escrevendo bloco 156 com caracteres "5"
+17590 ms: escrevendo bloco 157 com caracteres "1"
+17643 ms: escrevendo bloco 158 com caracteres "/"
+17691 ms: escrevendo bloco 159 com caracteres "'"
+17737 ms: escrevendo bloco 160 com caracteres ":"
+17794 ms: escrevendo bloco 161 com caracteres "H"
+17831 ms: escrevendo bloco 162 com caracteres "3"
+17879 ms: escrevendo bloco 163 com caracteres "@"
+17915 ms: escrevendo bloco 164 com caracteres "0"
+17952 ms: escrevendo bloco 165 com caracteres "C"
+18001 ms: escrevendo bloco 166 com caracteres "O"
+18038 ms: escrevendo bloco 167 com caracteres "O"
+18081 ms: escrevendo bloco 168 com caracteres "4"
+18113 ms: escrevendo bloco 169 com caracteres "2"
+18158 ms: escrevendo bloco 170 com caracteres "B"
+18203 ms: escrevendo bloco 171 com caracteres "'"
+18245 ms: escrevendo bloco 172 com caracteres "M"
+18273 ms: escrevendo bloco 173 com caracteres "A"
+18316 ms: escrevendo bloco 174 com caracteres "N"
+18347 ms: escrevendo bloco 175 com caracteres "8"
+18383 ms: escrevendo bloco 176 com caracteres "7"
+18413 ms: escrevendo bloco 177 com caracteres "G"
+18463 ms: escrevendo bloco 178 com caracteres "?"
+18517 ms: escrevendo bloco 179 com caracteres """
+18563 ms: escrevendo bloco 180 com caracteres "0"
+18615 ms: escrevendo bloco 181 com caracteres "1"
+18656 ms: escrevendo bloco 182 com caracteres "+"
+18710 ms: escrevendo bloco 183 com caracteres "D"
+18756 ms: escrevendo bloco 184 com caracteres "'"
+18805 ms: escrevendo bloco 185 com caracteres "."
+18837 ms: escrevendo bloco 186 com caracteres "$"
+18886 ms: escrevendo bloco 187 com caracteres "1"
+18917 ms: escrevendo bloco 188 com caracteres "="
+18942 ms: escrevendo bloco 189 com caracteres ">"
+18981 ms: escrevendo bloco 190 com caracteres "J"
+19010 ms: escrevendo bloco 191 com caracteres "5"
+19039 ms: escrevendo bloco 192 com caracteres "'"
+19073 ms: escrevendo bloco 193 com caracteres "K"
+19107 ms: escrevendo bloco 194 com caracteres "#"
+19139 ms: escrevendo bloco 195 com caracteres "6"
+19164 ms: escrevendo bloco 196 com caracteres "C"
+19210 ms: escrevendo bloco 197 com caracteres "2"
+19256 ms: escrevendo bloco 198 com caracteres "H"
+19287 ms: escrevendo bloco 199 com caracteres ">"
+19332 ms: escrevendo bloco 200 com caracteres "="
+19379 ms: escrevendo bloco 201 com caracteres ")"
+19430 ms: escrevendo bloco 202 com caracteres "B"
+19479 ms: escrevendo bloco 203 com caracteres "3"
+19518 ms: escrevendo bloco 204 com caracteres ","
+19560 ms: escrevendo bloco 205 com caracteres ","
+19612 ms: escrevendo bloco 206 com caracteres "G"
+19667 ms: escrevendo bloco 207 com caracteres "'"
+19714 ms: escrevendo bloco 208 com caracteres "-"
+19748 ms: escrevendo bloco 209 com caracteres "5"
+19786 ms: escrevendo bloco 210 com caracteres " "
+19826 ms: escrevendo bloco 211 com caracteres "$"
+19880 ms: escrevendo bloco 212 com caracteres "2"
+19934 ms: escrevendo bloco 213 com caracteres "2"
+19987 ms: escrevendo bloco 214 com caracteres "-"
+20023 ms: escrevendo bloco 215 com caracteres ";"
+20052 ms: escrevendo bloco 216 com caracteres "N"
+20094 ms: escrevendo bloco 217 com caracteres "+"
+20128 ms: escrevendo bloco 218 com caracteres "/"
+20179 ms: escrevendo bloco 219 com caracteres "0"
+20217 ms: escrevendo bloco 220 com caracteres "O"
+20255 ms: escrevendo bloco 221 com caracteres "2"
+20297 ms: escrevendo bloco 222 com caracteres "="
+20332 ms: escrevendo bloco 223 com caracteres "5"
+20389 ms: escrevendo bloco 224 com caracteres "<"
+20432 ms: escrevendo bloco 225 com caracteres ";"
+20476 ms: escrevendo bloco 226 com caracteres "%"
+20528 ms: escrevendo bloco 227 com caracteres "O"
+20579 ms: escrevendo bloco 228 com caracteres "E"
+20628 ms: escrevendo bloco 229 com caracteres "3"
+20678 ms: escrevendo bloco 230 com caracteres "#"
+20716 ms: escrevendo bloco 231 com caracteres "<"
+20770 ms: escrevendo bloco 232 com caracteres "B"
+20801 ms: escrevendo bloco 233 com caracteres "1"
+20847 ms: escrevendo bloco 234 com caracteres "F"
+20887 ms: escrevendo bloco 235 com caracteres "M"
+20936 ms: escrevendo bloco 236 com caracteres "N"
+20992 ms: escrevendo bloco 237 com caracteres "M"
+21039 ms: escrevendo bloco 238 com caracteres "H"
+21091 ms: escrevendo bloco 239 com caracteres "F"
+21134 ms: escrevendo bloco 240 com caracteres "="
+21184 ms: escrevendo bloco 241 com caracteres " "
+21228 ms: escrevendo bloco 242 com caracteres "0"
+21264 ms: escrevendo bloco 243 com caracteres "*"
+21303 ms: escrevendo bloco 244 com caracteres """
+21348 ms: escrevendo bloco 245 com caracteres "8"
+21371 ms: escrevendo bloco 246 com caracteres "+"
+21401 ms: escrevendo bloco 247 com caracteres "6"
+21435 ms: escrevendo bloco 248 com caracteres "-"
+21485 ms: escrevendo bloco 249 com caracteres "O"
+21525 ms: escrevendo bloco 250 com caracteres "I"
+21581 ms: escrevendo bloco 251 com caracteres "I"
+21598 ms: escrevendo bloco 252 com caracteres ";"
+21635 ms: escrevendo bloco 253 com caracteres "D"
+21679 ms: escrevendo bloco 254 com caracteres "I"
+21728 ms: escrevendo bloco 255 com caracteres "8"
+21765 ms: main fim

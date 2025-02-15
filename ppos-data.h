@@ -1,6 +1,7 @@
 // PingPongOS - PingPong Operating System
 // Prof. Carlos A. Maziero, DINF UFPR
 // Versão 1.1 -- Julho de 2016
+//Alunos Enzo Gaio e Thais Say
 
 // Estruturas de dados internas do sistema operacional
 
@@ -40,14 +41,14 @@ typedef struct {
 
 // estrutura que define um semáforo
 typedef struct {
-    int sem_state;
-    int sem_id;
-    int sem_q_counter;
-    queue_t** sem_queue;
-    queue_t** sem_queue_ready;
-    queue_t* removed_element;
-    task_t**   sem_t_queue;
-    unsigned char active;
+    int sem_state;// counter of available spots
+    int sem_id;//semaphore id
+    int sem_q_counter;//not used but when commented returns se fault
+    queue_t** sem_queue;//not used but when commented returns se fault
+    queue_t** sem_queue_ready;//not used but when commented returns se fault
+    queue_t* removed_element;//not used but when commented returns se fault
+    task_t**   sem_t_queue;//tasks queue
+    unsigned char active;// 'n' if the semaphore is already destroyed
 
 } semaphore_t ;
 

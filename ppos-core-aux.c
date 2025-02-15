@@ -1,3 +1,4 @@
+//Alunos Enzo Gaio e Thais Say
 #include "ppos.h"
 #include "ppos-core-globals.h"
 #include "ppos-disk-manager.h"
@@ -257,7 +258,8 @@ int sem_up (semaphore_t *s){
             return -1;
         }
         queue_t_e = (task_t*) queue_remove ((queue_t**)(s->sem_t_queue),(queue_t*) queue_t_e) ;
-        queue_append((queue_t**)&(readyQueue),(queue_t*) queue_t_e);//task is now on ready queue ready to resume
+        //queue_append((queue_t**)&(readyQueue),(queue_t*) queue_t_e);//task is now on ready queue ready to resume
+        task_resume(queue_t_e);
     }
     
     PPOS_PREEMPT_ENABLE
@@ -564,7 +566,7 @@ int after_mqueue_msgs (mqueue_t *queue) {
 // Essa função implemeneta o escalonador de requisicoes de 
 // leitura/scrita do disco usado pelo gerenciador do disco
 // A função implementa a política FCFS.
-diskrequest_t* disk_scheduler(diskrequest_t* queue) {
+/*diskrequest_t* disk_scheduler(diskrequest_t* queue) {
      // FCFS scheduler
     if ( queue != NULL ) {
         PPOS_PREEMPT_DISABLE
@@ -573,4 +575,4 @@ diskrequest_t* disk_scheduler(diskrequest_t* queue) {
         return request;
     }
     return NULL;
-}
+}*/

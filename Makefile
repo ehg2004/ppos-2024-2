@@ -3,7 +3,7 @@ TARGET = pingpongos
 BUILD_PATH = 
 # INCLUDE_PATH= ./include/
 
-SRC = ppos-core-aux.c pingpong-semaphore.c
+SRC = ppos-disk-manager.c pingpong-disco1.c
 
 
 
@@ -26,8 +26,8 @@ CFLAGS = -o $(TARGET)  -lm -Wall -O0 -g
 # all: build
 
 all:
-	gcc -o pingpongos ppos-core-aux.c pingpong-semaphore.c  ppos-all.o queue.o -lm -Wall -O0 -g
-
+# gcc -o pingpongos ppos-core-aux.c pingpong-mqueue.c  ppos-all.o queue.o -lm -Wall -O0 -g
+	gcc -o pingpongos_DISK ppos-disk-manager.c ppos-all.o queue.o disk-driver.c ppos-core-aux.c pingpong-disco1.c -lrt -Wall
 
 
 build: build_lib

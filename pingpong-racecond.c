@@ -10,9 +10,6 @@
 
 #define NUMTASKS 133
 #define NUMSTEPS 39373
-// #define NUMTASKS 100
-// #define NUMSTEPS 100
-
 
 task_t task[NUMTASKS] ;
 semaphore_t  s ;
@@ -33,8 +30,8 @@ void taskBody(char *id)
       for(int x = (rand()%7+1)*133; x > 0; x--);
       
       sem_up (&s) ;
-      if((soma % 1000) == 0)
-        printf("\nProgresso %ld/%ld [%s]", soma, soma_correta, id); fflush(stdout);
+      if ((soma % 1000) == 0)
+      printf("\nProgresso %ld/%ld [%s]", soma, soma_correta, id); fflush(stdout);
    }
    printf("\n%s repetiu %d vezes e terminou!", id, i); fflush(stdout);
    task_exit (0) ;
@@ -73,7 +70,7 @@ int main (int argc, char *argv[])
    printf ("\n\n\n[%06d] Resultado Final: %ld", systime(), soma) ;
    
    if (soma == soma_correta)
-     printf ("\n[%06d] SUCESSO!\n", systime()) ;
+     printf ("\n[%06d] SUCESSO!\n", systime(), soma) ;
    else
      printf ("\n[%06d] ERRO: Soma deu %ld, mas deveria ser %ld!\n",
              systime(), soma, soma_correta) ;

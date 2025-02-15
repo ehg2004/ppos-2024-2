@@ -45,7 +45,7 @@ void somaBody (void * arg)
    for (i=0; i<10; i++)
    {
       // recebe tres valores inteiros
-      mqueue_recv (&queueValores, &v1);
+      mqueue_recv (&queueValores, &v1) ;
       printf ("               T%d: recebeu %d\n", task_id(), v1) ;
       mqueue_recv (&queueValores, &v2) ;
       printf ("               T%d: recebeu %d\n", task_id(), v2) ;
@@ -53,10 +53,8 @@ void somaBody (void * arg)
       printf ("               T%d: recebeu %d\n", task_id(), v3) ;
 
       // calcula a soma e sua raiz
-      soma =(double)( v1 + v2 + v3 );
-      // raiz = sqrt (soma) ;
-      raiz =  sqrt(soma) ;
-
+      soma = v1 + v2 + v3 ;
+      raiz = sqrt (soma) ;
       printf ("               T%d: %d+%d+%d = %f (raiz %f)\n",
 	      task_id(), v1, v2, v3, soma, raiz) ;
 
@@ -95,16 +93,9 @@ int main (int argc, char *argv[])
 
    ppos_init () ;
 
-   // sem_create(&(queueValores.sBuffer),0);
-   // sem_create(&(queueValores.sItem),0);
-   // sem_create(&(queueValores.sVaga),5);
-   // sem_create(&(queueRaizes.sBuffer),0);
-   // sem_create(&(queueRaizes.sItem),0);
-   // sem_create(&(queueRaizes.sVaga),5);
    // cria as filas de mensagens (5 valores cada)
    mqueue_create (&queueValores, 5, sizeof(int)) ;
    mqueue_create (&queueRaizes,  5, sizeof(double)) ;
-
 
    // cria as threads
    task_create (&somador, somaBody, NULL) ;
