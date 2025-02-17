@@ -106,10 +106,9 @@ int disk_block_read(int block, void* buffer) {
     request->next = request;
     sem_down(&(disk.disk_semaphore));
     queue_append((queue_t**)&(disk.disk_queue), (queue_t*)request);
-    sem_up(&(disk.disk_semaphore));
-
     task_suspend(taskExec, &(disk.disk_task_queue));
     task_resume(disk_mgr_task);
+    sem_up(&(disk.disk_semaphore));
 
     task_yield();
     return 0;
@@ -125,10 +124,9 @@ int disk_block_write(int block, void* buffer) {
     request->next = request;
     sem_down(&(disk.disk_semaphore));
     queue_append((queue_t**)&(disk.disk_queue), (queue_t*)request);
-    sem_up(&(disk.disk_semaphore));
-
     task_suspend(taskExec, &(disk.disk_task_queue));
     task_resume(disk_mgr_task);
+    sem_up(&(disk.disk_semaphore));
 
     task_yield();
     return 0;
