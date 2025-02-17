@@ -24,6 +24,12 @@ diskrequest_t* disk_schedulerFCFS(diskrequest_t* queue);
 void bodyDiskManager(void* arg)  {
     while(1) {
         sem_down(&(disk.disk_semaphore));
+        if(disk.disk_signal) {
+            task_t* ready_task = (task_t*)queue_remove((queue_t**)&(disk.disk_task_queue), (queue_t*)disk.disk_task);
+            if(ready_task != NULL) task_resume(ready_task);
+            disk.disk_signal = 0;
+        }
+
         diskrequest_t* next_request;
         if(scheduler_algorithm == FCFS)
             next_request = disk_schedulerFCFS(disk.disk_queue);
@@ -48,9 +54,9 @@ void bodyDiskManager(void* arg)  {
 }
 void diskSignalHandler() {
     sem_down(&(disk.disk_semaphore));
-    task_t* ready_task = (task_t*)queue_remove((queue_t**)&(disk.disk_task_queue), (queue_t*)disk.disk_task);
-    if(ready_task != NULL) task_resume(ready_task);
+    disk.disk_signal = 1;
     sem_up(&(disk.disk_semaphore));
+    task_resume(disk_mgr_task);
 }
 
 // função para o tratamento de erros dos sinais - usada em disk_mgr_init()
@@ -69,9 +75,9 @@ int disk_mgr_init (int *numBlocks, int *blockSize) {
     if(*(blockSize) = disk_cmd (DISK_CMD_BLOCKSIZE, 0, 0), *(blockSize) < 0) return -1;
     disk.n_blocks = (*numBlocks);
     disk.blocks_sz = (*blockSize);
+    disk.disk_signal = 0;
     
     if(sem_create(&(disk.disk_semaphore), 1) < 0) return -1;
-    if(sem_create(&(disk.disk_queue_semaphore), 1) < 0) return -1;
     
     disk.disk_queue = NULL;//filas vazias
     disk.disk_task = NULL;

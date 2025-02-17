@@ -35,9 +35,9 @@ typedef struct {
     int blocks_sz;
     semaphore_t disk_semaphore;
     diskrequest_t* disk_queue;
-    semaphore_t disk_queue_semaphore;
-    task_t* disk_task;
-    task_t* disk_task_queue;
+    task_t* disk_task;//task using disk
+    task_t* disk_task_queue;//suspended tasks
+    int disk_signal; // 1 if a signal was received
     
 } disk_t;
 
