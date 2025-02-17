@@ -69,12 +69,15 @@ int disk_mgr_init (int *numBlocks, int *blockSize) {
     if(sem_create(&(disk.disk_semaphore), 1) < 0) return -1;
     if(sem_create(&(disk.disk_queue_semaphore), 1) < 0) return -1;
     
-    disk.disk_queue = NULL;
+    disk.disk_queue = NULL;//filas vazias
     disk.disk_task = NULL;
     disk.disk_task_queue = NULL;
+
+    disk_mgr_task = (task_t*) malloc(sizeof(task_t));
+    task_create(disk_mgr_task, bodyDiskManager, NULL);	
     
     position = 0;
-
+    total_distance = 0;
     signal(SIGUSR1, diskSignalHandler);
     // o seu codigo deve terminar ate aqui. 
     // As proximas linhas dessa função não devem ser modificadas
@@ -84,49 +87,39 @@ int disk_mgr_init (int *numBlocks, int *blockSize) {
 }
 
 int disk_block_read(int block, void* buffer) {
+    diskrequest_t* request = (diskrequest_t*) malloc(sizeof(diskrequest_t));
+    request->request_type = 1;
+    request->request_block = block;
+    request->request_buffer = buffer;
+    request->request_task = taskExec;
+    request->prev = request;
+    request->next = request;
     sem_down(&(disk.disk_semaphore));
-    if(disk_cmd (DISK_CMD_STATUS, 0, 0) == 1) {
-        disk_cmd (DISK_CMD_READ, block, buffer);
-        disk.disk_task = taskExec;
-    }
-    else {
-        diskrequest_t* request = (diskrequest_t*) malloc(sizeof(diskrequest_t));
-        request->request_type = 1;
-        request->request_block = block;
-        request->request_buffer = buffer;
-        request->request_task = taskExec;
-        request->prev = NULL;
-        request->next = NULL;
-        sem_down(&(disk.disk_queue_semaphore));
-        queue_append((queue_t**)&(disk.disk_queue), (queue_t*)request);
-        sem_up(&(disk.disk_queue_semaphore));
-    }
-    task_suspend(taskExec, &(disk.disk_task_queue));
+    queue_append((queue_t**)&(disk.disk_queue), (queue_t*)request);
     sem_up(&(disk.disk_semaphore));
+
+    task_suspend(taskExec, &(disk.disk_task_queue));
+    task_resume(disk_mgr_task);
+
     task_yield();
     return 0;
 }
 
 int disk_block_write(int block, void* buffer) {
+    diskrequest_t* request = (diskrequest_t*) malloc(sizeof(diskrequest_t));
+    request->request_type = 0;
+    request->request_block = block;
+    request->request_buffer = buffer;
+    request->request_task = taskExec;
+    request->prev = request;
+    request->next = request;
     sem_down(&(disk.disk_semaphore));
-    if(disk_cmd (DISK_CMD_STATUS, 0, 0) == 1) {
-        disk_cmd (DISK_CMD_WRITE, block, buffer);
-        disk.disk_task = taskExec;
-    }
-    else {
-        diskrequest_t* request = (diskrequest_t*) malloc(sizeof(diskrequest_t));
-        request->request_type = 0;
-        request->request_block = block;
-        request->request_buffer = buffer;
-        request->request_task = taskExec;
-        request->prev = NULL;
-        request->next = NULL;
-        sem_down(&(disk.disk_queue_semaphore));
-        queue_append((queue_t**)&(disk.disk_queue), (queue_t*)request);
-        sem_up(&(disk.disk_queue_semaphore));
-    }
-    task_suspend(taskExec, &(disk.disk_task_queue));
+    queue_append((queue_t**)&(disk.disk_queue), (queue_t*)request);
     sem_up(&(disk.disk_semaphore));
+
+    task_suspend(taskExec, &(disk.disk_task_queue));
+    task_resume(disk_mgr_task);
+
     task_yield();
     return 0;
 }
@@ -146,18 +139,18 @@ diskrequest_t* disk_schedulerFCFS(diskrequest_t* queue) {
     return NULL;
 }
 diskrequest_t* disk_schedulerCSCAN(diskrequest_t* queue) {
-    // FCFS scheduler
+    // CSCAN scheduler
    if ( queue != NULL ) {
        PPOS_PREEMPT_DISABLE
        diskrequest_t* request = queue;
        int best_block = request->request_block;
-       queue = queue->next;
-       while(queue != NULL) {
-            if(queue->request_block < best_block) {
-                best_block = queue->request_block;
+       diskrequest_t* r = queue->next;
+       while(queue != r) {
+            if(r->request_block < best_block) {
+                best_block = r->request_block;
                 request = queue;
             }
-            queue = queue->next;
+            r = r->next;
        }
        PPOS_PREEMPT_ENABLE
        return request;
@@ -165,19 +158,19 @@ diskrequest_t* disk_schedulerCSCAN(diskrequest_t* queue) {
    return NULL;
 }
 diskrequest_t* disk_schedulerSSTF(diskrequest_t* queue) {
-    // FCFS scheduler
+    //SSTF scheduler
    if ( queue != NULL ) {
        PPOS_PREEMPT_DISABLE
        diskrequest_t* request = queue;
        int best_dist = (position >= request->request_block) ? (position - request->request_block):(request->request_block - position);
-       queue = queue->next;
-       while(queue != NULL) {
-            int dist = (position >= queue->request_block) ? (position - queue->request_block):(queue->request_block - position);
+       diskrequest_t* r = queue->next;
+       while(r != queue) {
+            int dist = (position >= r->request_block) ? (position - r->request_block):(r->request_block - position);
             if(dist < best_dist) {
                 best_dist = dist;
                 request = queue;
             }
-            queue = queue->next;
+            r = r->next;
        }
        PPOS_PREEMPT_ENABLE
        return request;
