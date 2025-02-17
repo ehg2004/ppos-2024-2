@@ -22,31 +22,35 @@ diskrequest_t* disk_schedulerCSCAN(diskrequest_t* queue);
 diskrequest_t* disk_schedulerFCFS(diskrequest_t* queue);
 
 void bodyDiskManager(void* arg)  {
+    while(1) {
+        sem_down(&(disk.disk_semaphore));
+        diskrequest_t* next_request;
+        if(scheduler_algorithm == FCFS)
+            next_request = disk_schedulerFCFS(disk.disk_queue);
+        else if(scheduler_algorithm == CSCAN)
+            next_request = disk_schedulerCSCAN(disk.disk_queue);
+        else if(scheduler_algorithm == SSTF)
+            next_request = disk_schedulerSSTF(disk.disk_queue);
+        if(next_request != NULL && disk_cmd(DISK_CMD_STATUS, 0, 0) == DISK_STATUS_IDLE) {
+            if(next_request->request_type == 1) {
+                disk_cmd(DISK_CMD_READ, next_request->request_block, next_request->request_buffer);
+            }
+            else  disk_cmd(DISK_CMD_WRITE, next_request->request_block, next_request->request_buffer);
+            total_distance += (next_request->request_block >= position)?(next_request->request_block - position):(position - next_request->request_block );
+            position = next_request->request_block;
+            disk.disk_task = next_request->request_task;
+            task_suspend(taskExec, &(disk.disk_task_queue));
+        }
+        sem_up(&(disk.disk_semaphore));
+        task_yield();
+    }
 
 }
 void diskSignalHandler() {
     sem_down(&(disk.disk_semaphore));
     task_t* ready_task = (task_t*)queue_remove((queue_t**)&(disk.disk_task_queue), (queue_t*)disk.disk_task);
     if(ready_task != NULL) task_resume(ready_task);
-    diskrequest_t* next_request;
-    if(scheduler_algorithm == FCFS)
-        next_request = disk_schedulerFCFS(disk.disk_queue);
-    else if(scheduler_algorithm == CSCAN)
-        next_request = disk_schedulerCSCAN(disk.disk_queue);
-    else if(scheduler_algorithm == SSTF)
-        next_request = disk_schedulerSSTF(disk.disk_queue);
-    if(next_request != NULL) {
-        if(next_request->request_type == 1) {
-            disk_cmd(DISK_CMD_READ, next_request->request_block, next_request->request_buffer);
-        }
-        else  disk_cmd(DISK_CMD_WRITE, next_request->request_block, next_request->request_buffer);
-        total_distance += (next_request->request_block >= position)?(next_request->request_block - position):(position - next_request->request_block );
-        position = next_request->request_block;
-        disk.disk_task = next_request->request_task;
-        task_suspend(taskExec, &(disk.disk_task_queue));
-    }
     sem_up(&(disk.disk_semaphore));
-    if(next_request != NULL) task_yield();
 }
 
 // função para o tratamento de erros dos sinais - usada em disk_mgr_init()
